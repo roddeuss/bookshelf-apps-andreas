@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!--HEADER-->
+    <header>
+        <h1>Bookshelf App</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="https://www.instagram.com/perpusnas.go.id/">Instagram</a></li>
+            <li><a href="https://twitter.com/Perpusnas1">Twitter</a></li>
+            <li><a href="https://www.facebook.com/ayokeperpusnas/">Facebook</a></li>
+        </ul>
+    </nav>
+
+    <!--BODY-->
+    <main>
+        <section class="input-section">
+            <div>
+                <h2>Add New Book</h2>
+                <form id="input-buku">
+                    <div class="input judul">
+                        <label for="inputJudulBuku">Title</label>
+                        <input id="inputJudulBuku" type="text" placeholder="Dear John" required>
+                    </div>
+                    <div class="flex-row">
+                        <div class="input penulis">
+                            <label for="inputPenulisBuku">Author</label>
+                            <input id="inputPenulisBuku" type="text" placeholder="Nicholas Spark" required>
+                        </div>
+                        <div class="input tahun">
+                            <label for="inputTahunBuku">Year</label>
+                            <input id="inputTahunBuku" type="text" placeholder="2006" required>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="input-checkbox">
+                            <label for="dibaca">Finished Reading </label>
+                            <input id="dibaca" type="checkbox">
+                        </div>
+                        <div class="button">
+                            <button id="input-submit" type="submit">Add</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cari-buku">
+                    <h3>Find Book</h3>
+                    <form id="cari-buku">
+                        <input id="inputCariBuku" type="text">
+                        <button id="cari" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="book-shelf">
+            <h2>Not Finisehd Reading</h2>
+            <div class="book-list" id="belumDibaca">
+            </div>
+        </section>
+        <section class="book-shelf">
+            <h2>Finished Reading</h2>
+            <div class="book-list" id="telahDibaca">
+            </div>
+        </section>
+        <section class="edit-section" hidden>
+            <div class="edit-form">
+                <button id="closeForm">X</button>
+                <form id="edit-buku">
+                    <h3>Edit Book</h3>
+                    <div class="input judul">
+                        <label for="editJudulBuku">Title</label>
+                        <input id="editJudulBuku" type="text" required>
+                    </div>
+                    <div class="flex-row">
+                        <div class="input penulis">
+                            <label for="editPenulisBuku">Author</label>
+                            <input id="editPenulisBuku" type="text" required>
+                        </div>
+                        <div class="input tahun">
+                            <label for="editTahunBuku">Year</label>
+                            <input id="editTahunBuku" type="text" required>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="input-checkbox">
+                            <label for="editBaca">Finished Reading</label>
+                            <input id="editBaca" type="checkbox">
+                        </div>
+                        <div class="button">
+                            <button id="edit-submit" type="button">Edit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+		<article class="container-footer">
+			<table>
+				<tr>
+					<td class="cf-left">
+						Copyright © 2022 | Bookshelf Apps By Andreas Bilmar
+					</td>
+				</tr>
+			</table>
+		</article>
+	</footer>
+
+    <script src="./javascript/data.js"></script>
+    <script src="./javascript/dom.js"></script>
+    <script src="./javascript/script.js"></script>
+</body>
+</html>
